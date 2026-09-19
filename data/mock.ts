@@ -1,3 +1,5 @@
+import type { IconName } from "@/components/icons";
+
 export type PostKind = "achievement" | "activity" | "announcement";
 
 export const KIND_STYLES: Record<
@@ -81,8 +83,6 @@ export const posts: Post[] = [
     comments: 0,
   },
 ];
-
-export type IconName = "home" | "children" | "bell" | "user";
 
 export interface NavItem {
   href: string;
