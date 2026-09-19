@@ -96,17 +96,17 @@ export const navItems = [
 
 ## Criterios de aceptación
 
-- [ ] `/` se ve visualmente idéntico al mockup (tipografía, colores, espaciados, badges).
-- [ ] `npx tsc --noEmit` y `npm run build` pasan sin errores.
-- [ ] Desktop (≥1024px): sidebar fijo de 248px con "Feed" destacado.
-- [ ] Mobile (<1024px): aparece botón hamburger que alterna la visibilidad del sidebar.
-- [ ] "Nueva publicación" y la caja "Compartí un momento…" enlazan a `/crear-publicacion`.
-- [ ] Links del sidebar apuntan a `/ninos`, `/avisos` y `/mi-cuenta`.
-- [ ] Cada post muestra su badge con colores correctos (LOGRO/ACTIVIDAD/ANUNCIO).
-- [ ] Likes/comentarios coinciden con el mockup: 3/1, 5/2, 8/0.
-- [ ] "Editar" enlaza a `/crear-publicacion`.
-- [ ] Sin errores de consola al cargar `/`.
-- [ ] `lang="es"` y título de pestaña "OpenDayCare".
+- [x] `/` se ve visualmente idéntico al mockup (tipografía, colores, espaciados, badges).
+- [x] `npx tsc --noEmit` y `npm run build` pasan sin errores.
+- [x] Desktop (≥1024px): sidebar fijo de 248px con "Feed" destacado.
+- [x] Mobile (<1024px): aparece botón hamburger que alterna la visibilidad del sidebar.
+- [x] "Nueva publicación" y la caja "Compartí un momento…" enlazan a `/crear-publicacion`.
+- [x] Links del sidebar apuntan a `/ninos`, `/avisos` y `/mi-cuenta`.
+- [x] Cada post muestra su badge con colores correctos (LOGRO/ACTIVIDAD/ANUNCIO).
+- [x] Likes/comentarios coinciden con el mockup: 3/1, 5/2, 8/0.
+- [x] "Editar" enlaza a `/crear-publicacion`.
+- [x] Sin errores de consola al cargar `/`.
+- [x] `lang="es"` y título de pestaña "OpenDayCare".
 
 ## Decisiones
 

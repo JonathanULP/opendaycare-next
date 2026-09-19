@@ -1,6 +1,6 @@
 ---
 description: Verifica los criterios de aceptación de un spec en specs/ — los revisa, corrige y marca las casillas, valida el uso de Next.js contra Context7 y verifica las pantallas con Playwright + comparación de screenshots.
-mode: primary
+mode: subagent
 model: opencode/muse-spark-1.3-contributor-free
 temperature: 0.1
 color: success

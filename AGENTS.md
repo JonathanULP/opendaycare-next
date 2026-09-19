@@ -48,6 +48,13 @@ App de guardería/app con Next.js **16.3.5** (App Router, sin `src/`), React 19,
 - Convenir use para features grandes, antes de escribir código.
 - `specs/` aún no existe; el primer spec será `01-`. La creación de ramas la controla `AutoCreateBranch` en `specs/.spec-config.yml` (default: `true`).
 
+## Agentes
+
+Subagentes de opencode definidos en `.opencode/agent/`.
+
+- **`verify-spec`** — verificador de criterios de aceptación del flujo spec-driven (complemento de `/spec` y `/spec-impl`). Lee un spec en `specs/`, verifica cada criterio de su checklist (visual con Playwright contra los mockups de `references/pantallas/`, comportamiento, código estático, `npx tsc --noEmit` + `npm run build` y uso de Next.js contra Context7 y `node_modules/next/dist/docs/`), marca las casillas que pasan, reporta las que fallan y guarda toda la evidencia en `.playwright-mcp/`. **Nunca hace commit ni toca código.**
+  - Cómo invocarlo: `@verify-spec @specs/<NN-slug>.md` (acepta también `NN` o `slug`, o ninguna entrada para listar los specs).
+
 ## MCP
 
 - **Playwright**: Todo lo generado por Playwright (screenshots, snapshots, logs de consola, etc.) debe guardarse y manejarse dentro de la carpeta `.playwright-mcp`.

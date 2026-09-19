@@ -5,7 +5,7 @@ import { posts } from "@/data/mock";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen bg-canvas">
+    <div className="flex min-h-screen flex-col bg-canvas lg:flex-row">
       <Sidebar />
       <main className="min-w-0 flex-1 lg:h-screen lg:overflow-y-auto">
         <div className="mx-auto w-full max-w-[760px] px-5 pt-[34px] pb-20 sm:px-10">
