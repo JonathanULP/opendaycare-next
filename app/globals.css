@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --dc-canvas: #f6ecdf;
+  --dc-surface: #fffdf9;
+  --dc-surface-soft: #f4ece1;
+
+  --dc-ink: #3f362e;
+  --dc-ink-body: #4a4038;
+  --dc-ink-soft: #94887b;
+  --dc-ink-muted: #a89a8b;
+  --dc-ink-label: #8a7c6d;
+  --dc-ink-faint: #b0a290;
+  --dc-ink-nav: #6e6359;
+
+  --dc-line: #ece0d0;
+  --dc-line-soft: #e7dac8;
+  --dc-line-card: #f0e6d8;
+  --dc-line-dashed: #dbcdba;
+
+  --dc-brand-light: #f8c3a8;
+  --dc-brand-mid: #f4977e;
+  --dc-brand: #f2937a;
+  --dc-brand-deep: #ee8164;
+  --dc-accent: #e0654a;
+  --dc-accent-deep: #c5503a;
+  --dc-accent-heading: #d9583c;
+  --dc-accent-surface: #fbe3d8;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-canvas: var(--dc-canvas);
+  --color-surface: var(--dc-surface);
+  --color-surface-soft: var(--dc-surface-soft);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-ink: var(--dc-ink);
+  --color-ink-body: var(--dc-ink-body);
+  --color-ink-soft: var(--dc-ink-soft);
+  --color-ink-muted: var(--dc-ink-muted);
+  --color-ink-label: var(--dc-ink-label);
+  --color-ink-faint: var(--dc-ink-faint);
+  --color-ink-nav: var(--dc-ink-nav);
+
+  --color-line: var(--dc-line);
+  --color-line-soft: var(--dc-line-soft);
+  --color-line-card: var(--dc-line-card);
+  --color-line-dashed: var(--dc-line-dashed);
+
+  --color-brand-light: var(--dc-brand-light);
+  --color-brand-mid: var(--dc-brand-mid);
+  --color-brand: var(--dc-brand);
+  --color-brand-deep: var(--dc-brand-deep);
+  --color-accent: var(--dc-accent);
+  --color-accent-deep: var(--dc-accent-deep);
+  --color-accent-heading: var(--dc-accent-heading);
+  --color-accent-surface: var(--dc-accent-surface);
+
+  --font-fredoka: var(--font-fredoka);
+  --font-nunito: var(--font-nunito);
+  --font-sans: var(--font-nunito);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--dc-canvas);
+  color: var(--dc-ink);
+  font-family: var(--font-nunito), system-ui, sans-serif;
 }
