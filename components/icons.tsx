@@ -11,7 +11,8 @@ export type IconName =
   | "comment"
   | "camera"
   | "megaphone"
-  | "photo";
+  | "photo"
+  | "menu";
 
 const iconPaths: Record<IconName, ReactNode> = {
   home: <path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" />,
@@ -51,6 +52,7 @@ const iconPaths: Record<IconName, ReactNode> = {
       <path d="m21 15-3.6-3.6a2 2 0 0 0-2.8 0L6 21" />
     </>
   ),
+  menu: <path d="M3 6h18M3 12h18M3 18h18" />,
 };
 
 export function Logo(props: SVGProps<SVGSVGElement>) {
