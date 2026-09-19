@@ -1,6 +1,6 @@
 # SPEC 01 — Home: feed de OpenDayCare
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depende de:** Ninguna
 > **Fecha:** 2026-09-18
 > **Objetivo:** Recrear la pantalla de feed del mockup como home `/` con componentes reutilizables y datos mock, replicando el estilo del HTML de referencia sin autenticación ni base de datos.
