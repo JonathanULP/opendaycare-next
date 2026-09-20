@@ -15,7 +15,8 @@ export type IconName =
   | "menu"
   | "chevron-left"
   | "chevron-right"
-  | "alert-triangle";
+  | "alert-triangle"
+  | "search";
 
 const iconPaths: Record<IconName, ReactNode> = {
   home: <path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" />,
@@ -62,6 +63,12 @@ const iconPaths: Record<IconName, ReactNode> = {
     <>
       <path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" />
       <path d="M12 9v4M12 17h.01" />
+    </>
+  ),
+  search: (
+    <>
+      <circle cx="11" cy="11" r="7" />
+      <path d="m21 21-4.3-4.3" />
     </>
   ),
 };
