@@ -93,7 +93,7 @@ export interface NavItem {
 
 export const navItems: NavItem[] = [
   { href: "/", label: "Feed", icon: "home", active: true },
-  { href: "/ninos", label: "Niños", icon: "children", active: false },
-  { href: "/avisos", label: "Avisos", icon: "bell", active: false },
-  { href: "/mi-cuenta", label: "Mi cuenta", icon: "user", active: false },
+  { href: "/kids", label: "Niños", icon: "children", active: false },
+  { href: "/notices", label: "Avisos", icon: "bell", active: false },
+  { href: "/my-account", label: "Mi cuenta", icon: "user", active: false },
 ];

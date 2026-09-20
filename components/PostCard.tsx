@@ -65,7 +65,7 @@ export default function PostCard({ post }: PostCardProps) {
 
       {post.photo && (
         <Link
-          href="/foto"
+          href="/photo"
           className="mt-[14px] flex h-[200px] flex-col items-center justify-center gap-2 rounded-2xl"
           style={{
             border: "1.5px dashed var(--dc-line-dashed)",
@@ -90,7 +90,7 @@ export default function PostCard({ post }: PostCardProps) {
           {post.likes}
         </span>
         <Link
-          href="/detalle-publicacion"
+          href="/post-detail"
           className="flex items-center gap-[7px] font-bold"
           style={{ fontSize: 14, color: "var(--dc-ink-soft)" }}
         >
@@ -99,7 +99,7 @@ export default function PostCard({ post }: PostCardProps) {
         </Link>
         <span className="flex-1" />
         <Link
-          href="/crear-publicacion"
+          href="/create-post"
           className="font-extrabold"
           style={{ fontSize: 14, color: "var(--dc-accent-deep)" }}
         >

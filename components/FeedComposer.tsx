@@ -6,7 +6,7 @@ import { currentUser } from "@/data/mock";
 export default function FeedComposer() {
   return (
     <Link
-      href="/crear-publicacion"
+      href="/create-post"
       className="mb-6 flex items-center gap-[14px] rounded-[18px] bg-surface px-[18px] py-[14px]"
       style={{
         border: "1px solid var(--dc-line)",

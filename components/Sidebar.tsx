@@ -95,7 +95,7 @@ export default function Sidebar() {
         </Link>
 
         <Link
-          href="/crear-publicacion"
+          href="/create-post"
           onClick={handleClose}
           className="mb-[18px] flex w-full items-center justify-center gap-2 rounded-[14px] px-3 py-3 font-extrabold text-white"
           style={{
