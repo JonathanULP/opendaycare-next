@@ -12,7 +12,9 @@ export default function KidCard({ kid }: KidCardProps) {
   const subtitle =
     parentCount === 0
       ? "sin padres vinculados"
-      : `${parentCount} ${parentCount === 1 ? "padre" : "padres"} vinculados`;
+      : parentCount === 1
+        ? "1 padre vinculado"
+        : `${parentCount} padres vinculados`;
 
   return (
     <Link

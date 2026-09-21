@@ -116,16 +116,16 @@ Los 8 niños usan los colores/letras del mockup (`#A9D9E8/#1F7A93`, `#F4B8CC/#C4
 
 ## Criterios de aceptación
 
-- [ ] `/kids` se ve visualmente idéntico a `ninos.dc.html`: header, buscador, sección "SALA SOLES · 8 niños" y grilla de 8 tarjetas.
-- [ ] Escribir en "Buscar niño…" filtra las tarjetas por nombre (case-insensitive); al vaciar vuelven las 8.
-- [ ] Las tarjetas muestran el badge correcto: MANÍ (Mateo), LACTOSA (Tomás), VINCULAR (Valentina), chevron en las demás.
-- [ ] Cada tarjeta enlaza a `/kids/[id]` del niño correspondiente.
-- [ ] `/kids/mateo-fernandez` se ve idéntico a `perfil-nino.dc.html`: volver, cabecera 84px con Editar, banner MANÍ, filas nacimiento/Sala "Soles"/Ingreso, Resumen del día, PADRES VINCULADOS con Lucía ACTIVA + Diego PENDIENTE y "Vincular otro padre".
-- [ ] Los enlaces Editar, Resumen del día y Vincular otro padre apuntan a `/add-child`, `/day-summary` y `/link-parent` (rutas muertas) sin errores.
-- [ ] Un id inexistente (`/kids/algo`) muestra el `not-found` sin romper la app.
-- [ ] El sidebar mantiene "Niños" activo tanto en `/kids` como en `/kids/[id]`, y conserva el toggle mobile de SPEC 01 (<1024px).
-- [ ] `npx tsc --noEmit` y `npm run build` pasan sin errores (home `/` incluido tras el rename).
-- [ ] Sin errores de consola al navegar entre `/kids` y un perfil.
+- [x] `/kids` se ve visualmente idéntico a `ninos.dc.html`: header, buscador, sección "SALA SOLES · 8 niños" y grilla de 8 tarjetas.
+- [x] Escribir en "Buscar niño…" filtra las tarjetas por nombre (case-insensitive); al vaciar vuelven las 8.
+- [x] Las tarjetas muestran el badge correcto: MANÍ (Mateo), LACTOSA (Tomás), VINCULAR (Valentina), chevron en las demás.
+- [x] Cada tarjeta enlaza a `/kids/[id]` del niño correspondiente.
+- [x] `/kids/mateo-fernandez` se ve idéntico a `perfil-nino.dc.html`: volver, cabecera 84px con Editar, banner MANÍ, filas nacimiento/Sala "Soles"/Ingreso, Resumen del día, PADRES VINCULADOS con Lucía ACTIVA + Diego PENDIENTE y "Vincular otro padre".
+- [x] Los enlaces Editar, Resumen del día y Vincular otro padre apuntan a `/add-child`, `/day-summary` y `/link-parent` (rutas muertas) sin errores.
+- [x] Un id inexistente (`/kids/algo`) muestra el `not-found` sin romper la app.
+- [x] El sidebar mantiene "Niños" activo tanto en `/kids` como en `/kids/[id]`, y conserva el toggle mobile de SPEC 01 (<1024px).
+- [x] `npx tsc --noEmit` y `npm run build` pasan sin errores (home `/` incluido tras el rename).
+- [x] Sin errores de consola al navegar entre `/kids` y un perfil.
 
 ## Decisiones
 
