@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Avatar from "@/components/Avatar";
+import LinkParentModal from "@/components/LinkParentModal";
 import Sidebar from "@/components/Sidebar";
 import { Icon, Logo } from "@/components/icons";
-import { ALLERGY_STYLES, kids } from "@/data/mock";
+import { ALLERGY_STYLES, invitation, kids } from "@/data/mock";
 
 export default async function KidProfilePage({
   params,
@@ -220,26 +221,10 @@ export default async function KidProfilePage({
                       </div>
                     );
                   })}
-                  <Link
-                    href="/link-parent"
-                    className="flex items-center gap-3 pt-2"
-                  >
-                    <span
-                      className="flex h-10 w-10 flex-none items-center justify-center rounded-full"
-                      style={{
-                        border: "1.5px dashed #D8CBBA",
-                        color: "#B0A290",
-                      }}
-                    >
-                      <Icon name="plus" size={18} strokeWidth={2.2} />
-                    </span>
-                    <span
-                      className="font-extrabold"
-                      style={{ fontSize: "14.5px", color: "#C5503A" }}
-                    >
-                      Vincular otro padre
-                    </span>
-                  </Link>
+                  <LinkParentModal
+                    kidName={kid.name}
+                    invitationCode={invitation.code}
+                  />
                 </div>
               </div>
             </div>
