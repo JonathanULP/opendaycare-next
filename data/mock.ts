@@ -327,3 +327,23 @@ export const kids: Kid[] = [
     ],
   },
 ];
+
+export interface Invitation {
+  code: string;
+  email: string;
+  kidName: string;
+  kidInitials: string;
+  room: string;
+  avatarBg: string;
+  avatarColor: string;
+}
+
+export const invitation: Invitation = {
+  code: "7K4P9",
+  email: "lucia.fernandez@gmail.com",
+  kidName: "Mateo",
+  kidInitials: "M",
+  room: "Sala Soles",
+  avatarBg: "#A9D9E8",
+  avatarColor: "#1F7A93",
+};
