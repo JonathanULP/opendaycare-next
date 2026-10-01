@@ -30,16 +30,28 @@ export function Field({
 }: FieldProps) {
   return (
     <div className={"mb-[18px] " + className}>
-      <label
-        htmlFor={htmlFor}
-        className="mb-2 block text-[12px] font-extrabold tracking-[0.7px]"
-        style={{ color: "var(--dc-ink-soft)" }}
-      >
-        {label}
-        {isRequired && (
-          <span style={{ color: "var(--dc-accent-heading)" }}> *</span>
-        )}
-      </label>
+      {htmlFor ? (
+        <label
+          htmlFor={htmlFor}
+          className="mb-2 block text-[12px] font-extrabold tracking-[0.7px]"
+          style={{ color: "var(--dc-ink-soft)" }}
+        >
+          {label}
+          {isRequired && (
+            <span style={{ color: "var(--dc-accent-heading)" }}> *</span>
+          )}
+        </label>
+      ) : (
+        <span
+          className="mb-2 block text-[12px] font-extrabold tracking-[0.7px]"
+          style={{ color: "var(--dc-ink-soft)" }}
+        >
+          {label}
+          {isRequired && (
+            <span style={{ color: "var(--dc-accent-heading)" }}> *</span>
+          )}
+        </span>
+      )}
       {children}
       {error && (
         <p
