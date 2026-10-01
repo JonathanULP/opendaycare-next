@@ -73,20 +73,20 @@ No hay estado de aplicación nuevo: ninguna de las dos pantallas es client compo
 
 ## Criterios de aceptación
 
-- [ ] `/login` no renderiza el bloque "INGRESO COMO" ni los botones "Personal"/"Familia".
-- [ ] `/login` muestra el panel izquierdo con el gradiente 155deg `#F6A98E`/`#F2937A`/`#EC7E62`, el badge de logo de 46px, el titular, el subtítulo, el pie "🌿 Guardería Sala Soles" y los dos círculos decorativos.
-- [ ] `/login` muestra el formulario con título de 30px, "Ingresá para ver el día de hoy.", labels EMAIL y CONTRASEÑA, email vacío, contraseña con placeholder "••••••••" y el enlace "¿Olvidaste tu contraseña?" a la derecha.
-- [ ] "Iniciar sesión" navega a `/` y "Activá tu cuenta" a `/activate-account`.
-- [ ] `/activate-account` muestra el badge de 58px, "Bienvenida a OpenDayCare", el texto de invitación y la tarjeta con "Te invitaron a seguir a" + "Mateo · Sala Soles" (Avatar 44px, `#A9D9E8`/`#1F7A93`).
-- [ ] `/activate-account` muestra el código `7K4P9` en Fredoka 18px con `letter-spacing: 3px`, el email `lucia.fernandez@gmail.com` y el campo de contraseña con borde `#F2A78E`.
-- [ ] El consentimiento se ve marcado por defecto (check verde `#5FB97E` sobre `#FBF1D6`) y es alternable con un clic.
-- [ ] "Activar mi cuenta" navega a `/family-feed` (ruta muerta, muestra el not-found de Next) y "¿Ya tenés cuenta? Iniciar sesión" a `/login`.
-- [ ] Ambas páginas usan el fondo `#FBF4EC` (distinto del `--dc-canvas` de las pantallas con sidebar) y no renderizan el `Sidebar`.
-- [ ] Ninguna de las dos páginas es client component ni usa estado; no hay errores de hidratación.
-- [ ] En mobile (<1024px) `/login` apila el panel naranja compacto arriba del formulario, sin scroll horizontal; `/activate-account` queda centrado y legible.
-- [ ] `/`, `/kids` y `/kids/[id]` siguen funcionando y el `Sidebar` mantiene su enlace a `/login`.
-- [ ] `npx tsc --noEmit`, `npm run lint` y `npm run build` pasan sin errores.
-- [ ] Sin errores de consola al navegar `/login` → `/activate-account` → `/`.
+- [x] `/login` no renderiza el bloque "INGRESO COMO" ni los botones "Personal"/"Familia".
+- [x] `/login` muestra el panel izquierdo con el gradiente 155deg `#F6A98E`/`#F2937A`/`#EC7E62`, el badge de logo de 46px, el titular, el subtítulo, el pie "🌿 Guardería Sala Soles" y los dos círculos decorativos.
+- [x] `/login` muestra el formulario con título de 30px, "Ingresá para ver el día de hoy.", labels EMAIL y CONTRASEÑA, email vacío, contraseña con placeholder "••••••••" y el enlace "¿Olvidaste tu contraseña?" a la derecha.
+- [x] "Iniciar sesión" navega a `/` y "Activá tu cuenta" a `/activate-account`.
+- [x] `/activate-account` muestra el badge de 58px, "Bienvenida a OpenDayCare", el texto de invitación y la tarjeta con "Te invitaron a seguir a" + "Mateo · Sala Soles" (Avatar 44px, `#A9D9E8`/`#1F7A93`).
+- [x] `/activate-account` muestra el código `7K4P9` en Fredoka 18px con `letter-spacing: 3px`, el email `lucia.fernandez@gmail.com` y el campo de contraseña con borde `#F2A78E`.
+- [x] El consentimiento se ve marcado por defecto (check verde `#5FB97E` sobre `#FBF1D6`) y es alternable con un clic.
+- [x] "Activar mi cuenta" navega a `/family-feed` (ruta muerta, muestra el not-found de Next) y "¿Ya tenés cuenta? Iniciar sesión" a `/login`.
+- [x] Ambas páginas usan el fondo `#FBF4EC` (distinto del `--dc-canvas` de las pantallas con sidebar) y no renderizan el `Sidebar`.
+- [x] Ninguna de las dos páginas es client component ni usa estado; no hay errores de hidratación.
+- [x] En mobile (<1024px) `/login` apila el panel naranja compacto arriba del formulario, sin scroll horizontal; `/activate-account` queda centrado y legible.
+- [x] `/`, `/kids` y `/kids/[id]` siguen funcionando y el `Sidebar` mantiene su enlace a `/login`.
+- [x] `npx tsc --noEmit`, `npm run lint` y `npm run build` pasan sin errores.
+- [x] Sin errores de consola al navegar `/login` → `/activate-account` → `/`.
 
 ## Decisiones
 
@@ -95,6 +95,7 @@ No hay estado de aplicación nuevo: ninguna de las dos pantallas es client compo
 - **Sí:** formularios sin estado (decisión del usuario) — los CTA son `Link` a rutas reales, igual que los `<a href>` del mockup, no `<form>` con action.
 - **Sí:** rutas muertas `/family-feed` y `/forgot-password` — no hay mockup para recuperación de contraseña, y el feed de familia es otra pantalla; misma convención que `/add-child` en SPEC 02.
 - **Sí:** email de login vacío. El valor precargado del mockup (`caro@opendaycare.com`) venía del selector de rol que se elimina, así que se descarta.
+- **Sí:** contraseña de activación vacía, aunque el mockup la precargue con `value="contraseña"`. Es un artefacto de demo, no dato de la invitación, y precargar credenciales contradice la decisión del email de login.
 - **Sí:** el consentimiento es un `<input type="checkbox" defaultChecked>` real estilado con el variante `peer` de Tailwind: se ve como el mockup (check verde) y se alterna sin estado de React.
 - **Sí:** `invitation` con campos planos en `data/mock.ts`, sin referencia cruzada a `kids[0]`, siguiendo el modelo plano de SPEC 02 (los padres están inline en cada niño).
 - **Sí:** token `--dc-canvas-warm` en `globals.css` en lugar de hex sueltos, sin tocar `--dc-canvas` que usan las pantallas con sidebar.
