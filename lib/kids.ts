@@ -98,6 +98,10 @@ export function getKidInitials(fullName: string): string {
   return fullName.trim().charAt(0).toUpperCase();
 }
 
+export function getKidFirstName(fullName: string): string {
+  return fullName.trim().split(/\s+/)[0] ?? fullName.trim();
+}
+
 export function parseAllergyKind(tags: string): AllergyKind | undefined {
   for (const tag of tags.split(",")) {
     const kind = ALLERGY_TAGS[normalize(tag)];
