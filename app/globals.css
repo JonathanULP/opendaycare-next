@@ -2,6 +2,7 @@
 
 :root {
   --dc-canvas: #f6ecdf;
+  --dc-canvas-warm: #fbf4ec;
   --dc-surface: #fffdf9;
   --dc-surface-soft: #f4ece1;
 
@@ -30,6 +31,7 @@
 
 @theme inline {
   --color-canvas: var(--dc-canvas);
+  --color-canvas-warm: var(--dc-canvas-warm);
   --color-surface: var(--dc-surface);
   --color-surface-soft: var(--dc-surface-soft);
 
