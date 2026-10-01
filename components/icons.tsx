@@ -18,7 +18,10 @@ export type IconName =
   | "chevron-down"
   | "alert-triangle"
   | "search"
-  | "check";
+  | "check"
+  | "x"
+  | "send"
+  | "info";
 
 const iconPaths: Record<IconName, ReactNode> = {
   home: <path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" />,
@@ -75,6 +78,19 @@ const iconPaths: Record<IconName, ReactNode> = {
     </>
   ),
   check: <polyline points="20 6 9 17 4 12" />,
+  x: <path d="M18 6 6 18M6 6l12 12" />,
+  send: (
+    <>
+      <path d="m22 2-7 20-4-9-9-4z" />
+      <path d="M22 2 11 13" />
+    </>
+  ),
+  info: (
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 16v-4M12 8h.01" />
+    </>
+  ),
 };
 
 export function Logo(props: SVGProps<SVGSVGElement>) {
