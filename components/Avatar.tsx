@@ -12,6 +12,8 @@ export default function Avatar({
   size = 44,
   className,
 }: AvatarProps) {
+  const icon = avatar.icon;
+
   return (
     <div
       className={`flex flex-none items-center justify-center rounded-full font-fredoka font-semibold ${className ?? ""}`}
@@ -23,8 +25,8 @@ export default function Avatar({
         fontSize: size * 0.38,
       }}
     >
-      {avatar.kind === "icon" ? (
-        <Icon name="megaphone" size={size * 0.45} />
+      {avatar.kind === "icon" && icon ? (
+        <Icon name={icon} size={size * 0.45} filled={icon === "heart"} />
       ) : (
         avatar.initials
       )}

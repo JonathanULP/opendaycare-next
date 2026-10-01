@@ -11,10 +11,15 @@ export const KIND_STYLES: Record<
   announcement: { label: "ANUNCIO", badgeBg: "#CCD8F4", dot: "#4E72C8" },
 };
 
+export type AvatarIconName = Extract<
+  IconName,
+  "megaphone" | "check" | "heart" | "bell"
+>;
+
 export interface AvatarData {
   kind: "initials" | "icon";
   initials?: string;
-  icon?: "megaphone";
+  icon?: AvatarIconName;
   bg: string;
   color: string;
 }
@@ -355,3 +360,80 @@ export const invitation: Invitation = {
   avatarBg: "#A9D9E8",
   avatarColor: "#1F7A93",
 };
+
+export type NoticeKind = "comment" | "parent-activated" | "reaction" | "reminder";
+
+export const NOTICE_KINDS: Record<
+  NoticeKind,
+  { icon: AvatarIconName | null; bg: string; color: string; isClickable: boolean }
+> = {
+  comment: {
+    icon: null,
+    bg: "#C9B6E8",
+    color: "#fff",
+    isClickable: true,
+  },
+  "parent-activated": {
+    icon: "check",
+    bg: "#CFEBD8",
+    color: "#3E9B6C",
+    isClickable: false,
+  },
+  reaction: {
+    icon: "heart",
+    bg: "#FBD8CC",
+    color: "#D9684A",
+    isClickable: true,
+  },
+  reminder: {
+    icon: "bell",
+    bg: "#F4DC8E",
+    color: "#9A7B1E",
+    isClickable: false,
+  },
+};
+
+export interface Notice {
+  id: string;
+  kind: NoticeKind;
+  actor?: { name: string; initials: string };
+  text: string;
+  highlight?: string;
+  trailing?: string;
+  time: string;
+  href?: string;
+}
+
+export const notices: Notice[] = [
+  {
+    id: "notice-1",
+    kind: "comment",
+    actor: { name: "Lucía Fernández", initials: "L" },
+    text: "comentó en la publicación de Mateo.",
+    time: "Hace 12 min",
+    href: "/post-detail",
+  },
+  {
+    id: "notice-2",
+    kind: "parent-activated",
+    actor: { name: "Diego Fernández", initials: "D" },
+    text: "activó su cuenta y ya sigue a Mateo.",
+    time: "Hace 1 h",
+  },
+  {
+    id: "notice-3",
+    kind: "reaction",
+    actor: { name: "Carla Méndez", initials: "C" },
+    text: "reaccionó a la publicación de Sofía.",
+    time: "Hace 2 h",
+    href: "/post-detail",
+  },
+  {
+    id: "notice-4",
+    kind: "reminder",
+    text: "Recordá enviar el",
+    highlight: "resumen del día",
+    trailing: "de la sala Soles.",
+    time: "Hoy 17:00",
+  },
+];
