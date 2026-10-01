@@ -1,6 +1,6 @@
 # SPEC 06 — Modal de vincular padre
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depende de:** SPEC 02, SPEC 03, SPEC 04
 > **Fecha:** 2026-10-01
 > **Objetivo:** Convertir "Vincular otro padre" de `/kids/[id]` en un modal fiel a `vincular-padre.dc.html`, con validación real del email y un panel de confirmación tras enviar la invitación.
