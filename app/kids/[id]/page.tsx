@@ -106,16 +106,18 @@ export default async function KidProfilePage({
                     >
                       {allergyStyle.badge}
                     </span>
-                    <p
-                      className="m-0 mt-2"
-                      style={{
-                        fontSize: "14.5px",
-                        lineHeight: 1.5,
-                        color: allergyStyle.bannerColor,
-                      }}
-                    >
-                      {kid.allergies.note}
-                    </p>
+                    {kid.allergies.note && (
+                      <p
+                        className="m-0 mt-2"
+                        style={{
+                          fontSize: "14.5px",
+                          lineHeight: 1.5,
+                          color: allergyStyle.bannerColor,
+                        }}
+                      >
+                        {kid.allergies.note}
+                      </p>
+                    )}
                   </div>
                 </div>
               )}
@@ -128,6 +130,30 @@ export default async function KidProfilePage({
                 <DataRow label="Sala" value={kid.roomShort} />
                 <DataRow label="Ingreso" value={kid.admission} isLast />
               </div>
+
+              {kid.medicalNotes && (
+                <div
+                  className="mt-[18px] rounded-2xl bg-surface px-[18px] py-4"
+                  style={{ border: "1px solid var(--dc-line)" }}
+                >
+                  <div
+                    className="mb-2 text-[12.5px] font-extrabold tracking-[0.8px]"
+                    style={{ color: "var(--dc-ink-label)" }}
+                  >
+                    NOTAS MÉDICAS
+                  </div>
+                  <p
+                    className="m-0"
+                    style={{
+                      fontSize: "14.5px",
+                      lineHeight: 1.5,
+                      color: "var(--dc-ink-body)",
+                    }}
+                  >
+                    {kid.medicalNotes}
+                  </p>
+                </div>
+              )}
             </div>
 
             <div className="flex w-full flex-none flex-col gap-[14px] md:w-[300px]">

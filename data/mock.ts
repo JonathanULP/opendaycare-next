@@ -100,6 +100,13 @@ export const navItems: NavItem[] = [
 
 export type ParentStatus = "active" | "pending";
 
+export interface Room {
+  name: string;
+  short: string;
+}
+
+export const rooms: Room[] = [{ name: "Sala Soles", short: "Soles" }];
+
 export type AllergyKind = "peanut" | "lactose";
 
 export const ALLERGY_STYLES: Record<
@@ -131,6 +138,7 @@ export interface Kid {
   avatarBg: string;
   avatarColor: string;
   allergies?: { kind: AllergyKind; note: string };
+  medicalNotes?: string;
   parents: KidParent[];
 }
 

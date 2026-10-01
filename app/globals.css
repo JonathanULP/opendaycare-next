@@ -67,3 +67,7 @@ body {
   color: var(--dc-ink);
   font-family: var(--font-nunito), system-ui, sans-serif;
 }
+
+dialog.dc-modal::backdrop {
+  background: rgba(63, 54, 46, 0.45);
+}
