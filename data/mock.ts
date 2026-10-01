@@ -105,6 +105,10 @@ export const navItems: NavItem[] = [
 
 export type ParentStatus = "active" | "pending";
 
+export const PARENT_RELATIONSHIPS = ["Mamá", "Papá", "Tutor/a"] as const;
+
+export type ParentRelationship = (typeof PARENT_RELATIONSHIPS)[number];
+
 export interface Room {
   name: string;
   short: string;
